@@ -6,7 +6,7 @@ class Board
   end
 
   def display_board
-    # print "*CONNECT FOUR*\n"
+    print "* GAME BOARD *\n"
     print "A B C D E F G\n"
     print @new_board[0].join + "\n"
     print @new_board[1].join + "\n"
