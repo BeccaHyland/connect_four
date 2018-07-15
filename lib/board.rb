@@ -1,10 +1,8 @@
-require './lib/space.rb'
-
 class Board
   attr_reader :new_board
 
   def initialize
-    @new_board = Array.new(6) { Array.new(7) {". "} }
+    @new_board = Array.new(6) { Array.new(7) {"_ "} }
   end
 
   def display_board
@@ -18,8 +16,10 @@ class Board
     print @new_board[5].join + "\n"
   end
 
-  
+  def space_filled?
+  end
+
 end
 
-board = Board.new
-board.display_board
+# board = Board.new
+# board.display_board
