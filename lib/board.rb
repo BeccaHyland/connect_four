@@ -34,6 +34,8 @@ class Board
       @new_board[0][column_index] == "_ "
       @new_board[0].delete_at(column_index)
       @new_board[0].insert(column_index, "X ")
+    else
+      puts "Oops, this column is full." #loop back to ?
     end
     return @new_board
   end

@@ -20,12 +20,19 @@ class Message
     If there ARE other pieces already in the column,
     your piece will stack ON TOP of them.\n
     Your opponent is a computer player,
-    who will play first using X pieces.
-    You will play second, using 0 pieces.
+    who will play second using O pieces.
+    You will play first, using X pieces.
     GOOD LUCK!\n*** To start, enter any key."
   end
 
   def request_user_turn
+    "It's your turn!
+    Enter a letter A - G to choose a column."
+  end
+
+  def request_cpu_move
+    "Now it's the computer's turn.
+      To see the computer's move, enter any key."
   end
 
 end
