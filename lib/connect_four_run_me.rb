@@ -19,8 +19,7 @@ until good_input.any? {|good| good == user_column_choice}
 end
 
 board.receive_user_checker(user_column_choice)
-#checkers.receive_checker(user_choice)
-#then display the board again
+board.display_board
 
 
 #is it OK for the runner to determine the winning conditions? within the loop?

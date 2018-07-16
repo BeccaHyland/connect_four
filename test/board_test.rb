@@ -42,7 +42,7 @@ class BoardTest < Minitest::Test
   #   assert_equal expected, board.find_empty_space(1)
   #   end
 
-  def test_it_can_receive_checker_from_user
+  def test_it_can_place_user_checker_in_bottom_row
     board = Board.new
     expected = [
       ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
@@ -50,6 +50,24 @@ class BoardTest < Minitest::Test
       ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
       ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
       ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
+      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "]
+    ]
+    assert_equal expected, board.receive_user_checker("C")
+  end
+
+  def test_it_can_place_user_checker_in_next_open_row
+    board = Board.new
+    board.receive_user_checker("C")
+    board.receive_user_checker("C")
+    board.receive_user_checker("C")
+    board.receive_user_checker("C")
+    board.receive_user_checker("C")
+    expected = [
+      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
+      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
+      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
+      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
+      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
       ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "]
     ]
     assert_equal expected, board.receive_user_checker("C")

@@ -11,22 +11,31 @@ class Board
 
   def receive_user_checker(user_column_choice)
     column_index = convert_to_index(user_column_choice)
-    #REVERSE the board array....
-    next_row_with_space = @new_board.reverse.find do |row_array|
-      #starting with the last (bottom) array,
-      #ask each one if their element at that index is equal to
-      row_array[column_index] == "_ "
-      end
-    #it will return hopefully the first empty space
-    ##then somehow change that space to X... empty_space = "X " ?
-    ###verify this on the printed out board...
-
-    #check each array (in reverse order) WITH [column_index]
-    #FIND THE FIRST ONE that is not equal to "_"
-    #change it to X
-    next_row_with_space.delete_at(column_index)
-    next_row_with_space.insert(column_index, "X ")#this is not aan array method with =
-
+    if @new_board[5][column_index] == "_ "
+      @new_board[5].delete_at(column_index)
+      @new_board[5].insert(column_index, "X ")
+    elsif
+      @new_board[4][column_index] == "_ "
+      @new_board[4].delete_at(column_index)
+      @new_board[4].insert(column_index, "X ")
+    elsif
+      @new_board[3][column_index] == "_ "
+      @new_board[3].delete_at(column_index)
+      @new_board[3].insert(column_index, "X ")
+    elsif
+      @new_board[2][column_index] == "_ "
+      @new_board[2].delete_at(column_index)
+      @new_board[2].insert(column_index, "X ")
+    elsif
+      @new_board[1][column_index] == "_ "
+      @new_board[1].delete_at(column_index)
+      @new_board[1].insert(column_index, "X ")
+    elsif
+      @new_board[0][column_index] == "_ "
+      @new_board[0].delete_at(column_index)
+      @new_board[0].insert(column_index, "X ")
+    end
+    return @new_board
   end
 
   def convert_to_index(column)
