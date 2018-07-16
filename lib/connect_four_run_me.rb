@@ -7,9 +7,9 @@ message = Message.new
 #this will eventuall be a loop until...
 board.display_board
 puts message.welcome_instructions
-user_start = gets.chomp #chomp needed?
+gets #chomp needed?
 #replace below
-puts "TEMP:Let's get started! Enter A - G to choose a column."
+puts message.request_user_turn
 
 user_column_choice = gets.strip.upcase
 good_input = ["A", "B", "C", "D", "E", "F", "G"]
@@ -20,6 +20,8 @@ end
 
 board.receive_user_checker(user_column_choice)
 board.display_board
+puts message.request_cpu_move
+gets
 
 
 #is it OK for the runner to determine the winning conditions? within the loop?
