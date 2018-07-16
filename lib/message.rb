@@ -9,6 +9,7 @@ class Message
   end
 
   def welcome_instructions
+    #change this message to reflect user taking FIRST turn
     "\n\t*** WELCOME TO CONNECT FOUR ***\nGOAL:
     To place four of your checkers in a row on the board (see above)
     while blocking your opponext from doing the same.
