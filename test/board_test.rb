@@ -34,6 +34,20 @@ class BoardTest < Minitest::Test
       refute board.board_full?
     end
 
+    def test_it_can_identify_full_board
+      board = Board.new
+      board.new_board = [
+        ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
+        ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "],
+        ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
+        ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "],
+        ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
+        ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "]
+      ]
+      board.update_whether_board_full(board.new_board)
+      assert board.board_full?
+    end
+
   def test_it_can_convert_board_columns_to_index
     board = Board.new
     assert_equal 2, board.convert_to_index("C")

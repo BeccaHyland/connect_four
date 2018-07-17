@@ -32,6 +32,14 @@ class Board
     column_to_index[column]
   end
 
+  def update_whether_board_full(board)
+    if board.none? do |row_array|
+      row_array.include?("_ ")
+      @board_full = true
+      end
+    end
+  end
+
   def display_board
     print "* GAME BOARD *\n"
     print "A B C D E F G\n"
