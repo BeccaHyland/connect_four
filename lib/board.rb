@@ -11,32 +11,31 @@ class Board
 
   def receive_user_checker(user_column_choice)
     column_index = convert_to_index(user_column_choice)
-    if @new_board[5][column_index] == "_ "
-      @new_board[5].delete_at(column_index)
-      @new_board[5].insert(column_index, "X ")
-    elsif
-      @new_board[4][column_index] == "_ "
-      @new_board[4].delete_at(column_index)
-      @new_board[4].insert(column_index, "X ")
-    elsif
-      @new_board[3][column_index] == "_ "
-      @new_board[3].delete_at(column_index)
-      @new_board[3].insert(column_index, "X ")
-    elsif
-      @new_board[2][column_index] == "_ "
-      @new_board[2].delete_at(column_index)
-      @new_board[2].insert(column_index, "X ")
-    elsif
-      @new_board[1][column_index] == "_ "
-      @new_board[1].delete_at(column_index)
-      @new_board[1].insert(column_index, "X ")
-    elsif
-      @new_board[0][column_index] == "_ "
-      @new_board[0].delete_at(column_index)
-      @new_board[0].insert(column_index, "X ")
-    else
-      puts "Oops, this column is full." #loop back to ?
-    end
+      if @new_board[5][column_index] == "_ "
+        @new_board[5].delete_at(column_index)
+        @new_board[5].insert(column_index, "X ")
+      elsif
+        @new_board[4][column_index] == "_ "
+        @new_board[4].delete_at(column_index)
+        @new_board[4].insert(column_index, "X ")
+      elsif
+        @new_board[3][column_index] == "_ "
+        @new_board[3].delete_at(column_index)
+        @new_board[3].insert(column_index, "X ")
+      elsif
+        @new_board[2][column_index] == "_ "
+        @new_board[2].delete_at(column_index)
+        @new_board[2].insert(column_index, "X ")
+      elsif
+        @new_board[1][column_index] == "_ "
+        @new_board[1].delete_at(column_index)
+        @new_board[1].insert(column_index, "X ")
+      elsif
+        @new_board[0][column_index] == "_ "
+        @new_board[0].delete_at(column_index)
+        @new_board[0].insert(column_index, "X ")
+      else puts "Oops, this row is full."
+      end
     return @new_board
   end
 
