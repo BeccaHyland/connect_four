@@ -1,8 +1,11 @@
 require "./lib/board"
 require "./lib/message"
+require './lib/cpu_player'
+require 'pry'
 
 board = Board.new
 message = Message.new
+cpu_player = CpuPlayer.new
 
 #this will eventuall be a loop until...
 board.display_board
@@ -22,7 +25,8 @@ board.receive_user_checker(user_column_choice)
 board.display_board
 puts message.request_cpu_turn
 gets
-
+cpu_player.make_move(board.new_board)
+board.display_board
 
 
 #is it OK for the runner to determine the winning conditions? within the loop?

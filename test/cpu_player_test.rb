@@ -10,7 +10,9 @@ class CpuPlayerTest < Minitest::Test
     assert_instance_of CpuPlayer, cpu_player
   end
 
-  
-
+  # def test_it_can_choose_a_random_column
+  #   cpu_player = CpuPlayer.new
+  #   assert cpu_player.random_column.between?(0..6)
+  # end
 
 end

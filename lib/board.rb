@@ -1,5 +1,6 @@
 require './lib/checkers'
 
+
 class Board
   attr_reader   :checkers
   attr_accessor :new_board
@@ -11,7 +12,7 @@ class Board
 
   def receive_user_checker(user_column_choice)
     column_index = convert_to_index(user_column_choice)
-    @new_board.find.with_index do |row_array, i|
+    @new_board.find.with_index do |row_array, i| #should there be a reverse before FIND? or noooo
         if @new_board.reverse[i][column_index] == "_ "
         @new_board.reverse[i].delete_at(column_index)
         @new_board.reverse[i].insert(column_index, "X ")
