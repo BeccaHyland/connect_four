@@ -22,7 +22,8 @@ class Message
     Your opponent is a computer player,
     who will play second using O pieces.
     You will play first, using X pieces.
-    GOOD LUCK!\n*** To start, enter any key."
+    GOOD LUCK!\n*** To start, hit RETURN or ENTER.
+    After the game starts, enter QUIT if you need to leave the game."
   end
 
   def request_user_turn
@@ -32,7 +33,7 @@ class Message
 
   def request_cpu_turn
     "Now it's the computer's turn.
-      To see the computer's move, enter any key."
+      To see the computer's move, hit RETURN or ENTER."
   end
 
 end

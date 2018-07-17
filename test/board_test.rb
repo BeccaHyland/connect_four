@@ -36,7 +36,7 @@ class BoardTest < Minitest::Test
 
     def test_it_can_identify_full_board
       board = Board.new
-      board.new_board = [
+      test_board = [
         ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
         ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "],
         ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
@@ -44,7 +44,7 @@ class BoardTest < Minitest::Test
         ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
         ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "]
       ]
-      board.update_whether_board_full(board.new_board)
+      board.update_whether_board_full(test_board)
       assert board.board_full?
     end
 
