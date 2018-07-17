@@ -1,0 +1,3 @@
+class CpuPlayer
+
+end

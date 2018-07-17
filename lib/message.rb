@@ -30,7 +30,7 @@ class Message
     Enter a letter A - G to choose a column."
   end
 
-  def request_cpu_move
+  def request_cpu_turn
     "Now it's the computer's turn.
       To see the computer's move, enter any key."
   end

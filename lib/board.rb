@@ -6,14 +6,7 @@ class Board
 
   def initialize
     @checkers = Checkers.new
-    @new_board = [
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "]
-    ]
+    @new_board = Array.new(6) { Array.new(7) {"_ "} }
   end
 
   def receive_user_checker(user_column_choice)
@@ -48,6 +41,3 @@ class Board
   end
 
 end
-
-# board = Board.new
-# board.display_board

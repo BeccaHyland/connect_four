@@ -20,8 +20,9 @@ end
 
 board.receive_user_checker(user_column_choice)
 board.display_board
-puts message.request_cpu_move
+puts message.request_cpu_turn
 gets
+
 
 
 #is it OK for the runner to determine the winning conditions? within the loop?

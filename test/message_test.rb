@@ -10,10 +10,10 @@ class MessageTest < Minitest::Test
     assert_instance_of Message, message
   end
 
-  def test_it_can_welcome
+  def test_it_can_ask_for_clarification
     message = Message.new
-    expected = "Welcome to Connect Four. Are you ready to play? Enter YES or NO."
-    assert_equal expected, message.welcome
+    expected = "Oops, Connect Four can't read that. Please try again."
+    assert_equal expected, message.clarify
   end
 
 

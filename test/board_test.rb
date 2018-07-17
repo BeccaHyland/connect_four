@@ -61,16 +61,15 @@ class BoardTest < Minitest::Test
     board.receive_user_checker("C")
     board.receive_user_checker("C")
     board.receive_user_checker("C")
-    board.receive_user_checker("C")
     expected = [
+      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
+      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
       ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
       ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
       ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "X ", "_ ", "_ ", "_ ", "_ "]
+      ["_ ", "X ", "X ", "_ ", "_ ", "_ ", "_ "]
     ]
-    assert_equal expected, board.receive_user_checker("C")
+    assert_equal expected, board.receive_user_checker("B")
   end
 
 
