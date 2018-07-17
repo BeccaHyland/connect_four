@@ -1,13 +1,18 @@
 require './lib/checkers'
 
-
 class Board
   attr_reader   :checkers
-  attr_accessor :new_board
+  attr_accessor :new_board,
+                :board_full
 
   def initialize
     @checkers = Checkers.new
     @new_board = Array.new(6) { Array.new(7) {"_ "} }
+    @board_full = false
+  end
+
+  def board_full?
+    @board_full
   end
 
   def receive_user_checker(user_column_choice)
@@ -36,9 +41,6 @@ class Board
     print @new_board[3].join + "\n"
     print @new_board[4].join + "\n"
     print @new_board[5].join + "\n"
-  end
-
-  def space_filled?
   end
 
 end

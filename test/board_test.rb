@@ -29,18 +29,15 @@ class BoardTest < Minitest::Test
     assert_equal expected, board.new_board
   end
 
+    def test_it_starts_with_an_unfull_board
+      board = Board.new
+      refute board.board_full?
+    end
+
   def test_it_can_convert_board_columns_to_index
     board = Board.new
     assert_equal 2, board.convert_to_index("C")
   end
-
-  # def test_it_finds_first_array_from_bottom_with_empty_space_at_index
-  #   board = Board.new
-  #   expected =[
-  #     ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-  #     ["_ ", "X ", "_ ", "_ ", "_ ", "_ ", "_ "]]
-  #   assert_equal expected, board.find_empty_space(1)
-  #   end
 
   def test_it_can_place_user_checker_in_bottom_row
     board = Board.new
@@ -55,7 +52,7 @@ class BoardTest < Minitest::Test
     assert_equal expected, board.receive_user_checker("C")
   end
 
-  def test_it_can_place_user_checker_in_next_open_row
+  def test_it_can_place_user_checker_in_next_open_row_from_bottom
     board = Board.new
     board.receive_user_checker("C")
     board.receive_user_checker("C")
@@ -71,6 +68,5 @@ class BoardTest < Minitest::Test
     ]
     assert_equal expected, board.receive_user_checker("B")
   end
-
 
 end
