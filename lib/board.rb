@@ -49,6 +49,16 @@ class Board
     end
   end
 
+  def vertical_win?(board)
+    board = board.transpose
+    if board.any? do |row_array|
+        row_array.join.include?("X X X X ")
+        end
+        true
+    else false
+    end
+  end
+
   def display_board
     print "* GAME BOARD *\n"
     print "A B C D E F G\n"

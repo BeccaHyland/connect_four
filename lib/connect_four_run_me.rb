@@ -26,7 +26,8 @@ while board.board_full? == false
 
     board.receive_user_checker(user_column_choice)
     board.display_board
-    if board.horizontal_win?(board.new_board) == true #== true may not be needed
+    if board.horizontal_win?(board.new_board) ||
+      board.vertical_win?(board.new_board)
       puts message.user_win
       break
     else

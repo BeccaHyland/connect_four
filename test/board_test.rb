@@ -92,4 +92,13 @@ class BoardTest < Minitest::Test
     assert_equal true, board.horizontal_win?(board.new_board)
   end
 
+  def test_it_can_identify_four_in_a_vertical_row
+    board = Board.new
+    board.receive_user_checker("C")
+    board.receive_user_checker("C")
+    board.receive_user_checker("C")
+    board.receive_user_checker("C")
+    assert_equal true, board.vertical_win?(board.new_board)
+  end
+
 end
