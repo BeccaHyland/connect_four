@@ -1,5 +1,5 @@
 class Message
-
+  
   def clarify
     "Oops, Connect Four can't read that. Please try again."
   end
