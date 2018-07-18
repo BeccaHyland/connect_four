@@ -1,5 +1,5 @@
 class Message
-  
+
   def clarify
     "Oops, Connect Four can't read that. Please try again."
   end
@@ -34,6 +34,13 @@ class Message
   def request_cpu_turn
     "Now it's the computer's turn.
       To see the computer's move, hit RETURN or ENTER."
+  end
+
+  def user_win
+    "CONGRATULATIONS, you are the winner!\n
+    Thanks for playing ConnectFour!\n
+    To quit, enter QUIT.\n
+    To play again, enter any other key."
   end
 
 end

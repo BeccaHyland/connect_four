@@ -26,9 +26,14 @@ while board.board_full? == false
 
     board.receive_user_checker(user_column_choice)
     board.display_board
-    puts message.request_cpu_turn
-    gets
-    cpu_player.make_move(board.new_board)
-    board.display_board
+    if board.horizontal_win?(board.new_board) == true #== true may not be needed
+      puts message.user_win
+      break
+    else
+      puts message.request_cpu_turn
+      gets
+      cpu_player.make_move(board.new_board)
+      board.display_board
+    end
   end
 end

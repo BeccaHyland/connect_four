@@ -89,7 +89,7 @@ class BoardTest < Minitest::Test
     board.receive_user_checker("D")
     board.receive_user_checker("E")
     board.receive_user_checker("F")
-    assert_equal true, board.check_horizontal_win(board.new_board)
+    assert_equal true, board.horizontal_win?(board.new_board)
   end
 
 end

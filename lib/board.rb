@@ -40,7 +40,7 @@ class Board
     end
   end
 
-  def check_horizontal_win(board)
+  def horizontal_win?(board)
     if board.any? do |row_array|
         row_array.join.include?("X X X X ")
         end
