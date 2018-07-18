@@ -25,10 +25,14 @@ while board.board_full? == false
     end
 
     board.receive_user_checker(user_column_choice)
+    board.update_whether_board_full(board.new_board)
     board.display_board
     if board.horizontal_win?(board.new_board) ||
       board.vertical_win?(board.new_board)
       puts message.user_win
+      break
+    elsif board.board_full? == true #this is ending game immediately
+      puts message.draw
       break
     else
       puts message.request_cpu_turn

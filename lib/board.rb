@@ -18,8 +18,8 @@ class Board
   def update_whether_board_full(board)
     if board.none? do |row_array|
       row_array.include?("_ ")
-      @board_full = true
       end
+      @board_full = true
     end
   end
 
