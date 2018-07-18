@@ -15,15 +15,12 @@ class Board
     @board_full
   end
 
-  def receive_user_checker(user_column_choice)
-    column_index = convert_to_index(user_column_choice)
-    @new_board.find.with_index do |row_array, i| #should there be a reverse before FIND? or noooo
-        if @new_board.reverse[i][column_index] == "_ "
-        @new_board.reverse[i].delete_at(column_index)
-        @new_board.reverse[i].insert(column_index, "X ")
-        return @new_board
-        end
+  def update_whether_board_full(board)
+    if board.none? do |row_array|
+      row_array.include?("_ ")
+      @board_full = true
       end
+    end
   end
 
   def convert_to_index(column)
@@ -32,13 +29,23 @@ class Board
     column_to_index[column]
   end
 
-  def update_whether_board_full(board)
-    if board.none? do |row_array|
-      row_array.include?("_ ")
-      @board_full = true
+  def receive_user_checker(user_column_choice)
+    column_index = convert_to_index(user_column_choice)
+    @new_board.find.with_index do |row_array, i|
+      if @new_board.reverse[i][column_index] == "_ "
+      @new_board.reverse[i].delete_at(column_index)
+      @new_board.reverse[i].insert(column_index, "X ")
+      return @new_board
       end
     end
   end
+
+
+
+
+
+
+
 
   def display_board
     print "* GAME BOARD *\n"
