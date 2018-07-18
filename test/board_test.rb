@@ -85,16 +85,11 @@ class BoardTest < Minitest::Test
 
   def test_it_can_identify_four_in_a_horizontal_row
     board = Board.new
-    board_test = [
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "_ ", "_ ", "_ ", "_ ", "_ "],
-      ["_ ", "_ ", "X ", "X ", "X ", "X ", "_ "]
-    ]
-    expected = true
-    assert_equal expected, board.check_horizontal_win
+    board.receive_user_checker("C")
+    board.receive_user_checker("D")
+    board.receive_user_checker("E")
+    board.receive_user_checker("F")
+    assert_equal true, board.check_horizontal_win(board.new_board)
   end
 
 end

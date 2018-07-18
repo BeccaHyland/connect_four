@@ -32,5 +32,3 @@ while board.board_full? == false
     board.display_board
   end
 end
-
-#is it OK for the runner to determine the winning conditions? within the loop?
