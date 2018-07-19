@@ -22,6 +22,7 @@ class Game
   end
 
   def get_good_input
+    @board.display_board
     puts @message.request_user_turn
     user_column_choice = gets.strip.upcase
     if user_column_choice == "QUIT"
@@ -54,7 +55,7 @@ class Game
     else
       puts @message.request_cpu_turn
       gets
-      cpu_player.make_move(@board.new_board)
+      @cpu_player.make_move(@board.new_board)
       @board.display_board
       if @board.cpu_horizontal_win?(@board.new_board) ||
         @board.cpu_vertical_win?(@board.new_board)
