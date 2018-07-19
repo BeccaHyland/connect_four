@@ -38,17 +38,17 @@ class Message
 
   def user_win
     "CONGRATULATIONS, you are the winner!\n
-    Thanks for playing ConnectFour!\n"
+    Thanks for playing Connect Four!\n"
   end
 
   def cpu_win
     "COMPUTER WINS.
-    Thanks for playing ConnectFour!\n"
+    Thanks for playing Connect Four!\n"
   end
 
   def draw
     "GAME OVER, that's a draw.\n
-    Thanks for playing ConnectFour!\n"
+    Thanks for playing Connect Four!\n"
   end
 
 end
