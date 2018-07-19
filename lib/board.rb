@@ -74,6 +74,10 @@ class Board
     end
   end
 
+  def clear_board
+    @new_board = Array.new(6) { Array.new(7) {"_ "} }
+  end
+
   def display_board
     print "* GAME BOARD *\n"
     print "A B C D E F G\n"

@@ -37,21 +37,27 @@ class Message
 
   def user_win
     "CONGRATULATIONS, you are the winner!\n
-    Thanks for playing Connect Four!\n"
+    Thanks for playing Connect Four!\n
+    To leave the game, enter QUIT\n
+    To play again, enter any other key!"
   end
 
   def cpu_win
     "COMPUTER WINS.
-    Thanks for playing Connect Four!\n"
+    Thanks for playing Connect Four!\n
+    To leave the game, enter QUIT\n
+    To play again, enter any other key!"
   end
 
   def draw
     "GAME OVER, that's a draw.\n
-    Thanks for playing Connect Four!\n"
+    Thanks for playing Connect Four!\n
+    To leave the game, enter QUIT\n
+    To play again, enter any other key!"
   end
 
   def goodbye
-    "GOODBYE!\n
+    "GOODBYE!
     Thanks for playing Connect Four!\n"
   end
 
