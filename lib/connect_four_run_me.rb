@@ -31,11 +31,7 @@ while board.board_full? == false
       board.user_vertical_win?(board.new_board)
       puts message.user_win
       break
-    elsif board.cpu_horizontal_win?(board.new_board) ||
-      board.cpu_vertical_win?(board.new_board)
-      puts message.cpu_win #doesnt say this until the user takes next turn
-      break
-    elsif board.board_full? == true
+    elsif board.board_full? == true #true needed?
       puts message.draw
       break
     else
@@ -43,6 +39,15 @@ while board.board_full? == false
       gets
       cpu_player.make_move(board.new_board)
       board.display_board
+      if board.cpu_horizontal_win?(board.new_board) ||
+        board.cpu_vertical_win?(board.new_board)
+        puts message.cpu_win #doesnt say until user takes next turn
+        break
+      elsif board.board_full? == true #true needed?
+        puts message.draw
+        break
+      else
+      end
     end
   end
 end
