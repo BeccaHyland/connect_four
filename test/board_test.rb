@@ -91,7 +91,7 @@ class BoardTest < Minitest::Test
     board.receive_user_checker("D")
     board.receive_user_checker("E")
     board.receive_user_checker("F")
-    assert_equal true, board.horizontal_win?(board.new_board)
+    assert_equal true, board.user_horizontal_win?(board.new_board)
   end
 
   def test_it_can_identify_four_in_a_vertical_row
@@ -100,20 +100,7 @@ class BoardTest < Minitest::Test
     board.receive_user_checker("C")
     board.receive_user_checker("C")
     board.receive_user_checker("C")
-    assert_equal true, board.vertical_win?(board.new_board)
+    assert_equal true, board.user_vertical_win?(board.new_board)
   end
-
-  # def
-  #   board = Board.new
-  #   test_board = [
-  #     ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "],
-  #     ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
-  #     ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "],
-  #     ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "],
-  #     ["0 ", "X ", "0 ", "X ", "0 ", "X ", "0 "],
-  #     ["X ", "0 ", "X ", "0 ", "X ", "0 ", "X "]
-  #   ]
-  #   assert_equal true, board.draw?(test_board)
-  # end
 
 end

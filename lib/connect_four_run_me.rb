@@ -27,11 +27,15 @@ while board.board_full? == false
     board.receive_user_checker(user_column_choice)
     board.update_whether_board_full(board.new_board)
     board.display_board
-    if board.horizontal_win?(board.new_board) ||
-      board.vertical_win?(board.new_board)
+    if board.user_horizontal_win?(board.new_board) ||
+      board.user_vertical_win?(board.new_board)
       puts message.user_win
       break
-    elsif board.board_full? == true #this is ending game immediately
+    elsif board.cpu_horizontal_win?(board.new_board) ||
+      board.cpu_vertical_win?(board.new_board)
+      puts message.cpu_win #doesnt say this until the user takes next turn
+      break
+    elsif board.board_full? == true
       puts message.draw
       break
     else

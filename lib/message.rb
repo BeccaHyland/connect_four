@@ -43,6 +43,13 @@ class Message
     To play again, enter any other key."
   end
 
+  def cpu_win
+    "COMPUTER WINS.
+    Thanks for playing ConnectFour!\n
+    To quit, enter QUIT.\n
+    To play again, enter any other key."
+  end
+
   def draw
     "GAME OVER, that's a draw.\n
     Thanks for playing ConnectFour!\n

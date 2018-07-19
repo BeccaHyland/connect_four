@@ -40,21 +40,40 @@ class Board
     end
   end
 
-  def horizontal_win?(board)
+  def user_horizontal_win?(board)
     if board.any? do |row_array|
-        row_array.join.include?("X X X X ")
-        end
-        true
+      row_array.join.include?("X X X X ")
+      end
+      true
     else false
     end
   end
 
-  def vertical_win?(board)
+  def user_vertical_win?(board)
     board = board.transpose
     if board.any? do |row_array|
-        row_array.join.include?("X X X X ")
-        end
-        true
+      row_array.join.include?("X X X X ")
+      end
+      true
+    else false
+    end
+  end
+
+  def cpu_horizontal_win?(board)
+    if board.any? do |row_array|
+      row_array.join.include?("0 0 0 0 ")
+      end
+      true
+    else false
+    end
+  end
+
+  def cpu_vertical_win?(board)
+    board = board.transpose
+    if board.any? do |row_array|
+      row_array.join.include?("0 0 0 0 ")
+      end
+      true
     else false
     end
   end
