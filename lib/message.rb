@@ -50,4 +50,9 @@ class Message
     Thanks for playing Connect Four!\n"
   end
 
+  def goodbye
+    "GOODBYE!\n
+    Thanks for playing Connect Four!\n"
+  end
+
 end
