@@ -31,7 +31,7 @@ while board.board_full? == false
       board.user_vertical_win?(board.new_board)
       puts message.user_win
       break
-    elsif board.board_full? == true #true needed?
+    elsif board.board_full? == true
       puts message.draw
       break
     else
@@ -43,7 +43,7 @@ while board.board_full? == false
         board.cpu_vertical_win?(board.new_board)
         puts message.cpu_win #doesnt say until user takes next turn
         break
-      elsif board.board_full? == true #true needed?
+      elsif board.board_full? == true
         puts message.draw
         break
       else

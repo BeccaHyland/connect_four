@@ -1,12 +1,8 @@
-require './lib/checkers'
-
 class Board
-  attr_reader   :checkers
   attr_accessor :new_board,
                 :board_full
 
   def initialize
-    @checkers = Checkers.new
     @new_board = Array.new(6) { Array.new(7) {"_ "} }
     @board_full = false
   end

@@ -13,7 +13,7 @@ class Message
     "\n\t*** WELCOME TO CONNECT FOUR ***\nGOAL:
     To place four of your checkers in a row on the board (see above)
     while blocking your opponext from doing the same.
-    The winning row can be vertical, horizontal, or diagonal.\n\nGAME PLAY:
+    The winning row can be vertical or horizontal.\n\nGAME PLAY:
     On your turn, choose one column (A-G) to drop a piece into.
     If there are no other pieces in that column,
     your piece will go to the bottom row of the column.\n
@@ -27,7 +27,7 @@ class Message
   end
 
   def request_user_turn
-    "It's your turn!
+    "\tIt's your turn!
     Enter a letter A - G to choose a column."
   end
 
